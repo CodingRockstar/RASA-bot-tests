@@ -1,0 +1,126 @@
+slots:
+  iscustomer:
+    type: text
+  hastext:
+    type: text
+  truestatements:
+    type: text
+  offences:
+    type: text
+  result:
+    type: unfeaturized
+
+entities:
+- iscustomer
+- hastext
+- truestatements
+- offences
+
+intents:
+  - greet
+  - get_started
+  - hastext
+  - truestatements
+  - offences
+  - result
+  - goodbye
+  - affirm
+  - deny
+  - indifferent
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "\n\nHerzlich Willkommen.\nMein Name ist advo-Bot.\n\nIch schätze ein, ob du eine negative Google-Bewertung\
+      \ löschen lassen kannst.\n\n\
+      \ Bitte beantworten Sie ein paar einfache Fragen.\n
+      \ Wollen wir starten?"
+    buttons:
+      - title: "Ja"
+        payload: "/get_started"
+      - title: "Nein"
+        payload: "/goodbye"
+
+  utter_start:
+  - text: "Alles klar."
+  
+  utter_confirm:
+  - text: "Ok"
+  - text: "Alles klar!"
+  - text: "Okay"
+  - text: "Danke"
+  - text: "Ok, danke!"
+
+  utter_iscustomer:
+  - text: "War der Verfasser der Bewertung Kunde bei Ihnen?"
+    buttons:
+      - title: "Ja"
+        payload: '/hastext{"iscustomer": "ja"}'
+      - title: "Nein"
+        payload: '/hastext{"iscustomer": "nein"}'
+      - title: "Unklar"
+        payload: '/hastext{"iscustomer": "unklar"}'
+
+  utter_hastext:
+  - text: "Enthält die Bewertung Text?"
+    buttons:
+      - title: "Text vorhanden"
+        payload: '/truestatements{"hastext": "ja"}'
+      - title: "Kein Text"
+        payload: '/truestatements{"hastext": "nein"}'
+
+  utter_truestatements:
+  - text: "Sind die Aussagen in der Bewertung wahr?"
+    buttons:
+      - title: "Ja"
+        payload: '/offences{"truestatements": "ja"}'
+      - title: "Nein"
+        payload: '/offences{"truestatements": "nein"}'
+      - title: "Teilweise"
+        payload: '/offences{"truestatements": "teilweise"}'
+      - title: "Unklar"
+        payload: '/offences{"truestatements": "unklar"}'
+
+  utter_offences:
+  - text: "Enthält die Bewertung Beleidigungen, Schmähkritik und / oder rufschädigende Äußerungen?"
+    buttons:
+      - title: "Ja"
+        payload: '/result{"offences": "ja"}'
+      - title: "Nein"
+        payload: '/result{"offences": "nein"}'
+      - title: "Unklar"
+        payload: '/result{"offences": "unklar"}'
+
+  utter_result:
+  - text: "Zusammenfassung Ihrer Angaben:\n\n\
+      \ ------------------------------\n\n\
+      \ War der Verfasser Kunde bei Ihnen?:  {iscustomer}\n\n\
+      \ Enthält die Bewertung Text?:  {hastext}\n\n\
+      \ Sind die Aussagen in der Bewertung wahr?:  {truestatements}\n\n\
+      \ Enthält die Bewertung Beleidiungen?:  {offences}\n\n"
+
+  utter_result_success:
+  - text: "Super! Die Bewertung kann wahrscheinlich gelöscht werden."
+  - text: "Glückwunsch! Die Bewertung kann wahrscheinlich gelöscht werden."
+
+  utter_result_impossible:
+  - text: "Es tut mit leid. Die Bewertung kann wahrscheinlich nicht gelöscht werden."
+
+  utter_resiult_indifferent:
+  - text: "Die Bewertung kann eventuell gelöscht werden."
+
+  utter_thankyou:
+  - text: "Vielen Dank!"
+  - text: "Danke"
+
+  utter_goodbye:
+  - text: "Auf Wiedersehen!"
+  - text: "Bis später"
+
+  utter_iamabot:
+  - text: "Ich bin ein Bot. Ich wurde von advocado entwickelt und befinde mich in einem frühen Entwicklungsstadium.\n\n\
+      \ Für Fragen und Anregungen wenden Sie sich bitte an meine Eltern unter developer@advocado.de."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
