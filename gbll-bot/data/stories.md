@@ -1,22 +1,62 @@
-## main path
+## story_1011_stop
 * greet
   - utter_greet
-* get_started
+* affirm
   - utter_start
   - utter_iscustomer
-* hastext
+* affirm
+  - action_setslot_customer
   - utter_confirm
   - utter_hastext
-* truestatements
+* deny
+  - action_setslot_hastext
   - utter_confirm
   - utter_truestatements
-* offences
+* affirm
+  - action_setslot_truestatements
   - utter_confirm
   - utter_offences
-* result
-  - utter_result
+* affirm
+  - action_setslot_offences
+  - utter_confirm
+  - utter_result_summary
   - utter_result_success
-* goodbye
+  - utter_ask_restart
+* deny
+  - utter_goodbye
+
+## story_1011_restart
+* greet
+  - utter_greet
+* affirm
+  - utter_start
+  - utter_iscustomer
+* affirm
+  - action_setslot_customer
+  - utter_confirm
+  - utter_hastext
+* deny
+  - action_setslot_hastext
+  - utter_confirm
+  - utter_truestatements
+* affirm
+  - action_setslot_truestatements
+  - utter_confirm
+  - utter_offences
+* affirm
+  - action_setslot_offences
+  - utter_confirm
+  - utter_result_summary
+  - utter_result_success
+  - utter_ask_restart
+* affirm
+  - action_chat_restart
+  - utter_greet
+
+## start denied
+* greet
+  - utter_greet
+* deny
   - utter_goodbye
 
 ## say goodbye

@@ -7,8 +7,6 @@ slots:
     type: text
   offences:
     type: text
-  result:
-    type: unfeaturized
 
 entities:
 - iscustomer
@@ -27,81 +25,83 @@ intents:
   - affirm
   - deny
   - indifferent
+  - unclear
   - bot_challenge
 
 responses:
   utter_greet:
-  - text: "\n\nHerzlich Willkommen.\nMein Name ist advo-Bot.\n\nIch schätze ein, ob du eine negative Google-Bewertung\
-      \ löschen lassen kannst.\n\n\
+  - text: "Herzlich Willkommen.\nMein Name ist advo-Bot.\n\nIch schätze ein, ob Sie eine negative Google-Bewertung\
+      \ löschen lassen können.\n\n\
       \ Bitte beantworten Sie ein paar einfache Fragen.\n
       \ Wollen wir starten?"
     buttons:
-      - title: "Ja"
-        payload: "/get_started"
-      - title: "Nein"
-        payload: "/goodbye"
+      - title: "✅ Ja"
+        payload: "/affirm"
+      - title: "❌ Nein"
+        payload: "/deny"
 
   utter_start:
   - text: "Alles klar."
   
   utter_confirm:
-  - text: "Ok"
+  - text: "Ok 👍"
   - text: "Alles klar!"
-  - text: "Okay"
-  - text: "Danke"
-  - text: "Ok, danke!"
+  - text: "Okay 👌"
+  - text: "Danke 👍"
+  - text: "Ok, danke! 👌"
+  - text: ""
+  - text: ""
 
   utter_iscustomer:
   - text: "War der Verfasser der Bewertung Kunde bei Ihnen?"
     buttons:
-      - title: "Ja"
-        payload: '/hastext{"iscustomer": "ja"}'
-      - title: "Nein"
-        payload: '/hastext{"iscustomer": "nein"}'
-      - title: "Unklar"
-        payload: '/hastext{"iscustomer": "unklar"}'
+      - title: "✅ Ja"
+        payload: '/affirm{"iscustomer": "ja"}'
+      - title: "❌ Nein"
+        payload: '/deny{"iscustomer": "nein"}'
+      - title: "🤷‍♂️ Unklar"
+        payload: '/unclear{"iscustomer": "unklar"}'
 
   utter_hastext:
   - text: "Enthält die Bewertung Text?"
     buttons:
-      - title: "Text vorhanden"
-        payload: '/truestatements{"hastext": "ja"}'
-      - title: "Kein Text"
-        payload: '/truestatements{"hastext": "nein"}'
+      - title: "📝 Text vorhanden"
+        payload: '/affirm{"hastext": "ja"}'
+      - title: "🚫 Kein Text"
+        payload: '/deny{"hastext": "nein"}'
 
   utter_truestatements:
   - text: "Sind die Aussagen in der Bewertung wahr?"
     buttons:
-      - title: "Ja"
-        payload: '/offences{"truestatements": "ja"}'
-      - title: "Nein"
-        payload: '/offences{"truestatements": "nein"}'
+      - title: "✅ Ja"
+        payload: '/affirm{"truestatements": "ja"}'
+      - title: "❌ Nein"
+        payload: '/deny{"truestatements": "nein"}'
       - title: "Teilweise"
-        payload: '/offences{"truestatements": "teilweise"}'
-      - title: "Unklar"
-        payload: '/offences{"truestatements": "unklar"}'
+        payload: '/indifferent{"truestatements": "teilweise"}'
+      - title: "🤷‍♂️ Unklar"
+        payload: '/unclear{"truestatements": "unklar"}'
 
   utter_offences:
   - text: "Enthält die Bewertung Beleidigungen, Schmähkritik und / oder rufschädigende Äußerungen?"
     buttons:
-      - title: "Ja"
-        payload: '/result{"offences": "ja"}'
-      - title: "Nein"
-        payload: '/result{"offences": "nein"}'
-      - title: "Unklar"
-        payload: '/result{"offences": "unklar"}'
+      - title: "✅ Ja"
+        payload: '/affirm{"offences": "ja"}'
+      - title: "❌ Nein"
+        payload: '/deny{"offences": "nein"}'
+      - title: "🤷‍♂️ Unklar"
+        payload: '/unclear{"offences": "unklar"}'
 
-  utter_result:
+  utter_result_summary:
   - text: "Zusammenfassung Ihrer Angaben:\n\n\
-      \ ------------------------------\n\n\
       \ War der Verfasser Kunde bei Ihnen?:  {iscustomer}\n\n\
       \ Enthält die Bewertung Text?:  {hastext}\n\n\
       \ Sind die Aussagen in der Bewertung wahr?:  {truestatements}\n\n\
-      \ Enthält die Bewertung Beleidiungen?:  {offences}\n\n"
+      \ Enthält die Bewertung Beleidiungen?:  {offences}"
 
   utter_result_success:
-  - text: "Super! Die Bewertung kann wahrscheinlich gelöscht werden."
-  - text: "Glückwunsch! Die Bewertung kann wahrscheinlich gelöscht werden."
+  - text: "🎉 Super! Die Bewertung kann wahrscheinlich gelöscht werden."
+  - text: "🎉 Glückwunsch! Die Bewertung kann wahrscheinlich gelöscht werden."
 
   utter_result_impossible:
   - text: "Es tut mit leid. Die Bewertung kann wahrscheinlich nicht gelöscht werden."
@@ -109,13 +109,21 @@ responses:
   utter_resiult_indifferent:
   - text: "Die Bewertung kann eventuell gelöscht werden."
 
+  utter_ask_restart:
+  - text: "Wollen Sie eine weitere Bewertung prüfen?"
+    buttons:
+      - title: "✅ Ja"
+        payload: '/affirm'
+      - title: "❌ Nein"
+        payload: '/deny'
+
   utter_thankyou:
-  - text: "Vielen Dank!"
-  - text: "Danke"
+  - text: "Vielen Dank! 👍"
+  - text: "Danke 👍"
 
   utter_goodbye:
-  - text: "Auf Wiedersehen!"
-  - text: "Bis später"
+  - text: "Auf Wiedersehen! 👋"
+  - text: "Bis später 👋"
 
   utter_iamabot:
   - text: "Ich bin ein Bot. Ich wurde von advocado entwickelt und befinde mich in einem frühen Entwicklungsstadium.\n\n\
@@ -124,3 +132,10 @@ responses:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+actions:
+- action_setslot_customer
+- action_setslot_hastext
+- action_setslot_truestatements
+- action_setslot_offences
+- action_chat_restart

@@ -51,6 +51,8 @@
 - korrekt
 - klar
 - einverstanden
+- los geht es
+- starte
 
 ## intent:deny
 - nein
@@ -61,9 +63,13 @@
 - sicher nicht
 - nich wirklich
 - lass mal
+- nee
+
+## intent:unclear
+- unklar
+- ich weiß nicht
 
 ## intent:indifferent
-- ich weiß nicht
 - teilweise
 - teils teils
 - 50 50
