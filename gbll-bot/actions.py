@@ -101,19 +101,19 @@ class ActionReturnRatingResult(Action):
         return "action_rating_result"
 
     def run(self, dispatcher, tracker, domain):
-        iscustomer = tracker.get_slot("offences")
+        iscustomer = tracker.get_slot("iscustomer")
         hastext = tracker.get_slot("hastext")
         truestatements = tracker.get_slot("truestatements")
         offences = tracker.get_slot("offences")
 
-        if iscustomer == 'ja' and hastext == 'ja' and truestatements == 'ja' and offences == 'nein':
-            dispatcher.utter_template("utter_result_impossible", tracker)
-        elif iscustomer == 'ja' and hastext == 'ja' and truestatements == 'ja' and offences == 'unklar':
-            dispatcher.utter_template("utter_result_indifferent", tracker)
-            dispatcher.utter_template("utter_result_gotolegalcase_process", tracker)
+        if iscustomer == "ja" and hastext == "ja" and truestatements == "ja" and offences == "nein":
+            dispatcher.utter_message(template="utter_result_impossible")
+        elif iscustomer == "ja" and hastext == "ja" and truestatements == "ja" and offences == "unklar":
+            dispatcher.utter_message(template="utter_result_indifferent")
+            dispatcher.utter_message(template="utter_result_gotolegalcase_process")
         else:
-            dispatcher.utter_template("utter_result_success", tracker)
-            dispatcher.utter_template("utter_result_gotolegalcase_process", tracker)
+            dispatcher.utter_message(template="utter_result_success")
+            dispatcher.utter_message(template="utter_result_gotolegalcase_process")
 
         return []
 

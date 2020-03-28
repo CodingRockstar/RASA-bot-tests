@@ -60,6 +60,131 @@
 * affirm
   - action_chat_restart
 
+
+## story_1011_norepeat
+* greet
+  - utter_greet
+* affirm
+  - utter_start
+  - utter_iscustomer
+* affirm
+  - action_setslot_customer
+  - slot{"iscustomer": "ja"}
+  - utter_confirm
+  - utter_hastext
+* deny
+  - action_setslot_hastext
+  - slot{"hastext": "nein"}
+  - utter_confirm
+  - utter_truestatements
+* affirm
+  - action_setslot_truestatements
+  - slot{"truestatements": "ja"}
+  - utter_confirm
+  - utter_offences
+* affirm
+  - action_setslot_offences
+  - slot{"offences": "ja"}
+  - utter_confirm
+  - utter_result_summary
+  - action_rating_result
+  - utter_ask_restart
+* deny
+  - utter_goodbye
+
+## story_1011_repeat
+* greet
+  - utter_greet
+* affirm
+  - utter_start
+  - utter_iscustomer
+* affirm
+  - action_setslot_customer
+  - slot{"iscustomer": "ja"}
+  - utter_confirm
+  - utter_hastext
+* deny
+  - action_setslot_hastext
+  - slot{"hastext": "nein"}
+  - utter_confirm
+  - utter_truestatements
+* affirm
+  - action_setslot_truestatements
+  - slot{"truestatements": "ja"}
+  - utter_confirm
+  - utter_offences
+* affirm
+  - action_setslot_offences
+  - slot{"offences": "ja"}
+  - utter_confirm
+  - utter_result_summary
+  - action_rating_result
+  - utter_ask_restart
+* affirm
+  - action_chat_restart
+
+## story_1110_norepeat
+* greet
+  - utter_greet
+* affirm
+  - utter_start
+  - utter_iscustomer
+* affirm
+  - action_setslot_customer
+  - slot{"iscustomer": "ja"}
+  - utter_confirm
+  - utter_hastext
+* affirm
+  - action_setslot_hastext
+  - slot{"hastext": "ja"}
+  - utter_confirm
+  - utter_truestatements
+* affirm
+  - action_setslot_truestatements
+  - slot{"truestatements": "ja"}
+  - utter_confirm
+  - utter_offences
+* deny
+  - action_setslot_offences
+  - slot{"offences": "nein"}
+  - utter_confirm
+  - utter_result_summary
+  - action_rating_result
+  - utter_ask_restart
+* deny
+  - utter_goodbye
+
+## story_1110_repeat
+* greet
+  - utter_greet
+* affirm
+  - utter_start
+  - utter_iscustomer
+* affirm
+  - action_setslot_customer
+  - slot{"iscustomer": "ja"}
+  - utter_confirm
+  - utter_hastext
+* affirm
+  - action_setslot_hastext
+  - slot{"hastext": "ja"}
+  - utter_confirm
+  - utter_truestatements
+* affirm
+  - action_setslot_truestatements
+  - slot{"truestatements": "ja"}
+  - utter_confirm
+  - utter_offences
+* deny
+  - action_setslot_offences
+  - slot{"offences": "nein"}
+  - utter_confirm
+  - utter_result_summary
+  - action_rating_result
+  - utter_ask_restart
+* affirm
+  - action_chat_restart
+
 ## start denied
 * greet
   - utter_greet
