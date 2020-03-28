@@ -21,23 +21,6 @@
 - mach's gut
 - bis später
 
-## intent:hastext
-- die bewertung enthält text
-- ein text ist vorhanden
-- die bewertung hat text
-
-## intent:truestatements
-- die bewertung ist gelogen
-- die bewertung ist eine frechheit
-- die bewertung ist unwahr
-- das ist gelogen
-
-## intent:offences
-- Beleidungen sind auch drin
-- der macht mich fertig
-- Mein Ruf soll geschädigt werden.
-- Die wollen mich ruinieren.
-
 ## intent:result
 - zeig mir das Ergebnis
 - wie ist das Ergebnis
@@ -53,6 +36,8 @@
 - einverstanden
 - los geht es
 - starte
+- gerne
+- gern
 
 ## intent:deny
 - nein
@@ -64,10 +49,13 @@
 - nich wirklich
 - lass mal
 - nee
+- nope
+- kein
 
 ## intent:unclear
 - unklar
 - ich weiß nicht
+- mir egal
 
 ## intent:indifferent
 - teilweise

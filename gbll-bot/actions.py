@@ -93,6 +93,32 @@ class ActionSetslotOffences(Action):
 
 
 """
+Class ActionReturnRatingResult
+set Slots to None and restart
+"""
+class ActionReturnRatingResult(Action):
+    def name(self):
+        return "action_rating_result"
+
+    def run(self, dispatcher, tracker, domain):
+        iscustomer = tracker.get_slot("offences")
+        hastext = tracker.get_slot("hastext")
+        truestatements = tracker.get_slot("truestatements")
+        offences = tracker.get_slot("offences")
+
+        if iscustomer == 'ja' and hastext == 'ja' and truestatements == 'ja' and offences == 'nein':
+            dispatcher.utter_template("utter_result_impossible", tracker)
+        elif iscustomer == 'ja' and hastext == 'ja' and truestatements == 'ja' and offences == 'unklar':
+            dispatcher.utter_template("utter_result_indifferent", tracker)
+            dispatcher.utter_template("utter_result_gotolegalcase_process", tracker)
+        else:
+            dispatcher.utter_template("utter_result_success", tracker)
+            dispatcher.utter_template("utter_result_gotolegalcase_process", tracker)
+
+        return []
+
+
+"""
 Class ActionRestarted
 set Slots to None and restart
 """
@@ -103,9 +129,9 @@ class ActionRestarted(Action):
     def run(self, dispatcher, tracker, domain):
         return [
             Restarted(),
-            UserUttered(text="/greet", parse_data={
+            UserUttered(text="hi", parse_data={
                    "intent": {"confidence": 1.0, "name": "greet"},
                    "entities": []
                   }),
-            FollowupAction(name="utter_greet"),
+            FollowupAction(name="utter_iscustomer"),
         ]

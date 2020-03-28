@@ -15,18 +15,18 @@ entities:
 - offences
 
 intents:
-  - greet
-  - get_started
-  - hastext
-  - truestatements
-  - offences
-  - result
-  - goodbye
-  - affirm
-  - deny
-  - indifferent
-  - unclear
-  - bot_challenge
+- greet
+- get_started
+- hastext
+- truestatements
+- offences
+- result
+- goodbye
+- affirm
+- deny
+- indifferent
+- unclear
+- bot_challenge
 
 responses:
   utter_greet:
@@ -99,15 +99,18 @@ responses:
       \ Sind die Aussagen in der Bewertung wahr?:  {truestatements}\n\n\
       \ Enthält die Bewertung Beleidiungen?:  {offences}"
 
+  utter_result_gotolegalcase_process:
+  - text: "Wenn Sie die Bewertung löschen lassen wollen, nutzen Sie dafür bitte unser einfaches Formular: [hier klicken](https://www.advocado.de/rechtsfrage-stellen.html?utm_source=advobot)"
+
   utter_result_success:
-  - text: "🎉 Super! Die Bewertung kann wahrscheinlich gelöscht werden."
-  - text: "🎉 Glückwunsch! Die Bewertung kann wahrscheinlich gelöscht werden."
+  - text: "🎉 **Super! Die Bewertung kann wahrscheinlich gelöscht werden.**"
+  - text: "🎉 **Glückwunsch! Die Bewertung kann wahrscheinlich gelöscht werden.**"
 
   utter_result_impossible:
-  - text: "Es tut mit leid. Die Bewertung kann wahrscheinlich nicht gelöscht werden."
+  - text: "😞 ** Es tut uns leid. Die Bewertung kann wahrscheinlich nicht gelöscht werden.**"
 
   utter_resiult_indifferent:
-  - text: "Die Bewertung kann eventuell gelöscht werden."
+  - text: "**Die Bewertung kann eventuell gelöscht werden.**"
 
   utter_ask_restart:
   - text: "Wollen Sie eine weitere Bewertung prüfen?"
@@ -138,4 +141,5 @@ actions:
 - action_setslot_hastext
 - action_setslot_truestatements
 - action_setslot_offences
+- action_rating_result
 - action_chat_restart
