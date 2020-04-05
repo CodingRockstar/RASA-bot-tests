@@ -14,7 +14,6 @@
 - los geht's
 - los geht es
 - starte
-- Ja
 
 ## intent:goodbye
 - hau rein
@@ -42,7 +41,6 @@
 - gerne
 - gern
 - jo
-- /affirm{"iscustomer": "ja"}
 
 ## intent:deny
 - nein
