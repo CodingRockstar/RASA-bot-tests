@@ -7,12 +7,14 @@
 - guten abend
 - servus
 - moin
+- Hi
 
 ## intent:get_started
 - lass uns starten
 - los geht's
 - los geht es
 - starte
+- Ja
 
 ## intent:goodbye
 - hau rein
@@ -40,6 +42,7 @@
 - gerne
 - gern
 - jo
+- /affirm{"iscustomer": "ja"}
 
 ## intent:deny
 - nein
@@ -91,7 +94,6 @@
 - wie ist es so
 - wie läuft es
 - wie läufts
-- wie gehts dir
 - wie geht es dir
 - wie geht es dir heute
 - wie ist das Wetter
