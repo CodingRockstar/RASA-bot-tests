@@ -47,7 +47,8 @@ class RatingForm(FormAction):
             "iscustomer": [
                 self.from_entity(entity="iscustomer"),
                 self.from_intent(intent="affirm", value="ja"),
-                self.from_intent(intent="deny", value="nein")
+                self.from_intent(intent="deny", value="nein"),
+                self.from_intent(intent="unclear", value="unklar")
             ],
             "hastext": [
                 self.from_entity(entity="hastext"),
@@ -57,12 +58,15 @@ class RatingForm(FormAction):
             "truestatemens": [
                 self.from_entity(entity="truestatemens"),
                 self.from_intent(intent="affirm", value="ja"),
-                self.from_intent(intent="deny", value="nein")
+                self.from_intent(intent="deny", value="nein"),
+                self.from_intent(intent="indifferent", value="teilweise"),
+                self.from_intent(intent="unclear", value="unklar")
             ],
             "offences": [
                 self.from_entity(entity="offences"),
                 self.from_intent(intent="affirm", value="ja"),
-                self.from_intent(intent="deny", value="nein")
+                self.from_intent(intent="deny", value="nein"),
+                self.from_intent(intent="unclear", value="unklar")
             ]
         }
 
