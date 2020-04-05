@@ -7,6 +7,7 @@
 - guten abend
 - servus
 - moin
+- Hi
 
 ## intent:get_started
 - lass uns starten
@@ -91,7 +92,6 @@
 - wie ist es so
 - wie läuft es
 - wie läufts
-- wie gehts dir
 - wie geht es dir
 - wie geht es dir heute
 - wie ist das Wetter

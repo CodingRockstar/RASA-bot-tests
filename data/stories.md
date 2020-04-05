@@ -1,7 +1,7 @@
-# happy path
+## happy path
 * greet
     - utter_greet
-* get_started
+* get_started OR affirm
     - utter_start
     - rating_form
     - form{"name": "rating_form"}
@@ -19,7 +19,7 @@
 ## unhappy path
 * greet
     - utter_greet
-* get_started
+* get_started OR affirm
     - utter_start
     - rating_form
     - form{"name": "rating_form"}
@@ -34,7 +34,7 @@
 ## very unhappy path
 * greet
     - utter_greet
-* get_started
+* get_started OR affirm
     - utter_start
     - rating_form
     - form{"name": "rating_form"}
@@ -55,7 +55,7 @@
 ## stop but continue path
 * greet
     - utter_greet
-* get_started
+* get_started OR affirm
     - utter_start
     - rating_form
     - form{"name": "rating_form"}
@@ -71,7 +71,7 @@
 ## stop and really stop path
 * greet
     - utter_greet
-* get_started
+* get_started OR affirm
     - utter_start
     - rating_form
     - form{"name": "rating_form"}
@@ -83,7 +83,6 @@
     - utter_thankyou
     - utter_goodbye
 
-
 ## say goodbye
 * goodbye
   - utter_goodbye
@@ -91,3 +90,29 @@
 ## bot challenge
 * bot_challenge
   - utter_iamabot
+
+## New Story
+
+* greet
+    - utter_greet
+* get_started
+    - utter_start
+    - rating_form
+    - form{"name": "rating_form"}
+    - form{"name": null}
+    - utter_goodbye
+* thankyou
+    - utter_welcome
+
+## New Story
+
+* greet
+    - utter_greet
+* affirm
+    - utter_start
+    - rating_form
+    - form{"name": "rating_form"}
+    - form{"name": null}
+    - utter_goodbye
+* thankyou
+    - utter_welcome
