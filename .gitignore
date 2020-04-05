@@ -1,3 +1,4 @@
 gbll-bot/models/*.tar.gz
 .DS_Store
 *.pyc
+gbll-bot-form/models/*.tar.gz
