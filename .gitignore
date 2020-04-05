@@ -1,6 +1,1 @@
-gbll-bot/models/*.tar.gz
 .DS_Store
-*.pyc
-gbll-bot-form/models/*.tar.gz
-gbll-bot-1st-draft/models/*.tar.gz
-models/*.tar.gz
