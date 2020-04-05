@@ -60,39 +60,39 @@ responses:
   - text: War der Verfasser der Bewertung Kunde bei Ihnen?
     buttons:
     - title: ✅ Ja
-      payload: '/affirm{"iscustomer": "ja"}'
+      payload: /affirm
     - title: ❌ Nein
-      payload: '/deny{"iscustomer": "nein"}'
+      payload: /deny
     - title: 🤷‍♂️ Unklar
-      payload: '/unclear{"iscustomer": "unklar"}'
+      payload: /unclear
   utter_ask_hastext:
   - text: Enthält die Bewertung Text?
     buttons:
     - title: 📝 Text vorhanden
-      payload: '/affirm{"hastext": "ja"}'
+      payload: /affirm
     - title: 🚫 Kein Text
-      payload: '/deny{"hastext": "nein"}'
+      payload: /deny
   utter_ask_truestatements:
   - text: Sind die Aussagen in der Bewertung wahr?
     buttons:
     - title: ✅ Ja
-      payload: '/affirm{"truestatements": "ja"}'
+      payload: /affirm
     - title: ❌ Nein
-      payload: '/deny{"truestatements": "nein"}'
+      payload: /deny
     - title: Teilweise
-      payload: '/indifferent{"truestatements": "teilweise"}'
+      payload: /indifferent
     - title: 🤷‍♂️ Unklar
-      payload: '/unclear{"truestatements": "unklar"}'
+      payload: /unclear
   utter_ask_offences:
   - text: Enthält die Bewertung Beleidigungen, Schmähkritik und / oder rufschädigende
       Äußerungen?
     buttons:
     - title: ✅ Ja
-      payload: '/affirm{"offences": "ja"}'
+      payload: /affirm
     - title: ❌ Nein
-      payload: '/deny{"offences": "nein"}'
+      payload: /deny
     - title: 🤷‍♂️ Unklar
-      payload: '/unclear{"offences": "unklar"}'
+      payload: /unclear
   utter_result_summary:
   - text: "Zusammenfassung Ihrer Angaben:\n\n War der Verfasser Kunde bei Ihnen?:\
       \  {iscustomer}\n\n Enthält die Bewertung Text?:  {hastext}\n\n Sind die Aussagen\
