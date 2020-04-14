@@ -4,9 +4,6 @@ session_config:
 intents:
 - greet
 - get_started
-- hastext
-- truestatements
-- offences
 - result
 - goodbye
 - affirm
@@ -16,13 +13,7 @@ intents:
 - bot_challenge
 - thankyou
 - stop
-- chitchat:
-    use_entities: []
-entities:
-- iscustomer
-- hastext
-- truestatements
-- offences
+- chitchat
 slots:
   hastext:
     type: unfeaturized
@@ -33,6 +24,8 @@ slots:
   offences:
     type: unfeaturized
     auto_fill: false
+  requested_slot:
+    type: unfeaturized
   truestatements:
     type: unfeaturized
     auto_fill: false
@@ -106,7 +99,7 @@ responses:
   - text: 🎉 **Glückwunsch! Die Bewertung kann wahrscheinlich gelöscht werden.**
   utter_result_impossible:
   - text: 😞 ** Es tut uns leid. Die Bewertung kann wahrscheinlich nicht gelöscht werden.**
-  utter_resiult_indifferent:
+  utter_result_indifferent:
   - text: '**Die Bewertung kann eventuell gelöscht werden.**'
   utter_ask_restart:
   - text: Wollen Sie eine weitere Bewertung prüfen?
@@ -136,7 +129,6 @@ responses:
       \ einem frühen Entwicklungsstadium.\n\n Für Fragen und Anregungen wenden Sie\
       \ sich bitte an meine Eltern unter developer@advocado.de."
 actions:
-- action_chat_restart
 - utter_greet
 - utter_start
 - utter_confirm
@@ -156,5 +148,6 @@ actions:
 - utter_chitchat
 - utter_ask_continue
 - utter_iamabot
+- utter_result_indifferent
 forms:
 - rating_form

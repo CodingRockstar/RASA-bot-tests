@@ -116,3 +116,199 @@
     - utter_goodbye
 * thankyou
     - utter_welcome
+
+## New Story
+
+* greet
+    - utter_greet
+* affirm
+    - utter_start
+    - rating_form
+    - form{"name":"rating_form"}
+    - slot{"requested_slot":"iscustomer"}
+* affirm
+    - rating_form
+    - slot{"iscustomer":"ja"}
+    - slot{"requested_slot":"hastext"}
+* deny
+    - rating_form
+    - slot{"hastext":"nein"}
+    - slot{"requested_slot":"truestatements"}
+* affirm
+    - rating_form
+    - slot{"truestatements":"ja"}
+    - slot{"requested_slot":"offences"}
+* affirm
+    - rating_form
+    - slot{"offences":"ja"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+    - utter_goodbye
+
+## New Story
+
+* greet
+    - utter_greet
+* get_started
+    - utter_start
+    - rating_form
+    - form{"name":"rating_form"}
+    - slot{"requested_slot":"iscustomer"}
+* affirm
+    - rating_form
+    - slot{"iscustomer":"ja"}
+    - slot{"requested_slot":"hastext"}
+* affirm
+    - rating_form
+    - slot{"hastext":"ja"}
+    - slot{"requested_slot":"truestatements"}
+* affirm
+    - rating_form
+    - slot{"truestatements":"ja"}
+    - slot{"requested_slot":"offences"}
+* deny
+    - rating_form
+    - slot{"offences":"nein"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+    - utter_goodbye
+
+## New Story
+
+* greet
+    - utter_greet
+* affirm
+    - utter_start
+    - rating_form
+    - form{"name":"rating_form"}
+    - slot{"requested_slot":"iscustomer"}
+* affirm
+    - rating_form
+    - slot{"iscustomer":"ja"}
+    - slot{"requested_slot":"hastext"}
+* deny
+    - rating_form
+    - slot{"hastext":"nein"}
+    - slot{"requested_slot":"truestatements"}
+* affirm
+    - rating_form
+    - slot{"truestatements":"ja"}
+    - slot{"requested_slot":"offences"}
+* affirm
+    - rating_form
+    - slot{"offences":"ja"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+    - utter_goodbye
+
+## New Story
+
+* greet
+    - utter_greet
+* get_started
+    - utter_start
+    - rating_form
+    - form{"name":"rating_form"}
+    - slot{"requested_slot":"iscustomer"}
+* affirm
+    - rating_form
+    - slot{"iscustomer":"ja"}
+    - slot{"requested_slot":"hastext"}
+* deny
+    - rating_form
+    - slot{"hastext":"nein"}
+    - slot{"requested_slot":"truestatements"}
+* affirm
+    - rating_form
+    - slot{"truestatements":"ja"}
+    - slot{"requested_slot":"offences"}
+* deny
+    - rating_form
+    - slot{"offences":"nein"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+    - utter_goodbye
+
+## New Story
+
+* greet
+    - utter_greet
+* affirm
+    - utter_start
+    - rating_form
+    - form{"name":"rating_form"}
+    - slot{"requested_slot":"iscustomer"}
+* affirm
+    - rating_form
+    - slot{"iscustomer":"ja"}
+    - slot{"requested_slot":"hastext"}
+* deny
+    - rating_form
+    - slot{"hastext":"nein"}
+    - slot{"requested_slot":"truestatements"}
+* affirm
+    - rating_form
+    - slot{"truestatements":"ja"}
+    - slot{"requested_slot":"offences"}
+* unclear
+    - rating_form
+    - slot{"offences":"unklar"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+    - utter_goodbye
+
+## New Story
+
+* greet
+    - utter_greet
+* get_started
+    - utter_start
+    - rating_form
+    - form{"name":"rating_form"}
+    - slot{"requested_slot":"iscustomer"}
+* affirm
+    - rating_form
+    - slot{"iscustomer":"ja"}
+    - slot{"requested_slot":"hastext"}
+* affirm
+    - rating_form
+    - slot{"hastext":"ja"}
+    - slot{"requested_slot":"truestatements"}
+* affirm
+    - rating_form
+    - slot{"truestatements":"ja"}
+    - slot{"requested_slot":"offences"}
+* affirm
+    - rating_form
+    - slot{"offences":"ja"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+    - utter_goodbye
+
+## New Story
+
+* greet
+    - utter_greet
+* affirm
+    - utter_start
+    - rating_form
+    - form{"name":"rating_form"}
+    - slot{"requested_slot":"iscustomer"}
+* affirm
+    - rating_form
+    - slot{"iscustomer":"ja"}
+    - slot{"requested_slot":"hastext"}
+* affirm
+    - rating_form
+    - slot{"hastext":"ja"}
+    - slot{"requested_slot":"truestatements"}
+* affirm
+    - rating_form
+    - slot{"truestatements":"ja"}
+    - slot{"requested_slot":"offences"}
+* unclear
+    - rating_form
+    - slot{"offences":"unklar"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+    - utter_goodbye
