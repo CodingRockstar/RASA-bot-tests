@@ -91,37 +91,11 @@
 * bot_challenge
   - utter_iamabot
 
-## New Story
+## 1-0-1-1
 
 * greet
     - utter_greet
-* get_started
-    - utter_start
-    - rating_form
-    - form{"name": "rating_form"}
-    - form{"name": null}
-    - utter_goodbye
-* thankyou
-    - utter_welcome
-
-## New Story
-
-* greet
-    - utter_greet
-* affirm
-    - utter_start
-    - rating_form
-    - form{"name": "rating_form"}
-    - form{"name": null}
-    - utter_goodbye
-* thankyou
-    - utter_welcome
-
-## New Story
-
-* greet
-    - utter_greet
-* affirm
+* get_started OR affirm
     - utter_start
     - rating_form
     - form{"name":"rating_form"}
@@ -145,11 +119,11 @@
     - slot{"requested_slot":null}
     - utter_goodbye
 
-## New Story
+## 1-1-1-0
 
 * greet
     - utter_greet
-* get_started
+* get_started OR affirm
     - utter_start
     - rating_form
     - form{"name":"rating_form"}
@@ -173,11 +147,11 @@
     - slot{"requested_slot":null}
     - utter_goodbye
 
-## New Story
+## 1-0-1-1
 
 * greet
     - utter_greet
-* affirm
+* get_started OR affirm
     - utter_start
     - rating_form
     - form{"name":"rating_form"}
@@ -201,11 +175,11 @@
     - slot{"requested_slot":null}
     - utter_goodbye
 
-## New Story
+## 1-0-1-0
 
 * greet
     - utter_greet
-* get_started
+* get_started OR affirm
     - utter_start
     - rating_form
     - form{"name":"rating_form"}
@@ -229,11 +203,11 @@
     - slot{"requested_slot":null}
     - utter_goodbye
 
-## New Story
+## 1-0-1-2
 
 * greet
     - utter_greet
-* affirm
+* get_started OR affirm
     - utter_start
     - rating_form
     - form{"name":"rating_form"}
@@ -257,11 +231,11 @@
     - slot{"requested_slot":null}
     - utter_goodbye
 
-## New Story
+## 1-1-1-1
 
 * greet
     - utter_greet
-* get_started
+* get_started OR affirm
     - utter_start
     - rating_form
     - form{"name":"rating_form"}
@@ -285,11 +259,11 @@
     - slot{"requested_slot":null}
     - utter_goodbye
 
-## New Story
+## 1-1-1-2
 
 * greet
     - utter_greet
-* affirm
+* get_started OR affirm
     - utter_start
     - rating_form
     - form{"name":"rating_form"}
@@ -309,6 +283,58 @@
 * unclear
     - rating_form
     - slot{"offences":"unklar"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+    - utter_goodbye
+
+## stop - continue - stop - really stop
+
+* greet
+    - utter_greet
+* stop
+    - utter_ask_continue
+* get_started OR affirm
+    - utter_start
+    - rating_form
+    - form{"name":"rating_form"}
+    - slot{"requested_slot":"iscustomer"}
+* stop
+    - utter_ask_continue
+* deny
+    - action_deactivate_form
+    - form{"name":null}
+    - slot{"requested_slot":null}
+    - utter_thankyou
+    - utter_goodbye
+
+## 1-1-1-1 w/ chitchat
+
+* greet
+    - utter_greet
+* get_started OR affirm
+    - utter_start
+    - rating_form
+    - form{"name":"rating_form"}
+    - slot{"requested_slot":"iscustomer"}
+* affirm
+    - rating_form
+    - slot{"iscustomer":"ja"}
+    - slot{"requested_slot":"hastext"}
+* chitchat
+    - utter_chitchat
+    - rating_form
+    - slot{"requested_slot":"hastext"}
+* affirm
+    - rating_form
+    - slot{"hastext":"ja"}
+    - slot{"requested_slot":"truestatements"}
+* affirm
+    - rating_form
+    - slot{"truestatements":"ja"}
+    - slot{"requested_slot":"offences"}
+* affirm
+    - rating_form
+    - slot{"offences":"ja"}
     - form{"name":null}
     - slot{"requested_slot":null}
     - utter_goodbye
