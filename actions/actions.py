@@ -55,7 +55,7 @@ class RatingForm(FormAction):
                 self.from_intent(intent="affirm", value="ja"),
                 self.from_intent(intent="deny", value="nein")
             ],
-            "truestatemens": [
+            "truestatements": [
                 self.from_entity(entity="truestatemens"),
                 self.from_intent(intent="affirm", value="ja"),
                 self.from_intent(intent="deny", value="nein"),
@@ -84,7 +84,15 @@ class RatingForm(FormAction):
 
         if iscustomer == "ja" and hastext == "ja" and truestatements == "ja" and offences == "nein":
             dispatcher.utter_message(template="utter_result_impossible")
-        elif iscustomer == "ja" and hastext == "ja" and truestatements == "ja" and offences == "unklar":
+        elif (
+                (iscustomer == "ja" and hastext == "ja" and truestatements == "ja" and offences == "unklar") or 
+                (iscustomer == "ja" and hastext == "ja" and truestatements == "unklar" and offences == "nein") or 
+                (iscustomer == "ja" and hastext == "ja" and truestatements == "unklar" and offences == "unklar") or
+                (iscustomer == "unklar" and hastext == "ja" and truestatements == "ja" and offences == "nein") or
+                (iscustomer == "unklar" and hastext == "ja" and truestatements == "ja" and offences == "unklar") or
+                (iscustomer == "unklar" and hastext == "ja" and truestatements == "unklar" and offences == "nein") or
+                (iscustomer == "unklar" and hastext == "ja" and truestatements == "unklar" and offences == "unklar")
+            ):
             dispatcher.utter_message(template="utter_result_indifferent")
             dispatcher.utter_message(template="utter_result_gotolegalcase_process")
         else:
