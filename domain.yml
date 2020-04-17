@@ -1,6 +1,6 @@
 session_config:
   session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  carry_over_slots_to_new_session: false
 intents:
 - greet
 - get_started
@@ -31,14 +31,8 @@ slots:
     auto_fill: false
 responses:
   utter_greet:
-  - text: "Herzlich Willkommen.\nMein Name ist advo-Bot.\n\nIch schätze ein, ob Sie\
-      \ eine negative Google-Bewertung löschen lassen können.\n\n Bitte beantworten\
-      \ Sie ein paar einfache Fragen.\n  Wollen wir starten?"
-    buttons:
-    - title: ✅ Ja
-      payload: /get_started
-    - title: ❌ Nein
-      payload: /deny
+  - text: "Herzlich Willkommen. Mein Name ist advo-Bot. \n\nIch schätze ein, ob Sie\
+      \ eine negative Google-Bewertung löschen lassen können."
   utter_start:
   - text: Alles klar.
   - text: ''
@@ -128,6 +122,17 @@ responses:
   - text: "Ich bin ein Bot. Ich wurde von advocado entwickelt und befinde mich in\
       \ einem frühen Entwicklungsstadium.\n\n Für Fragen und Anregungen wenden Sie\
       \ sich bitte an meine Eltern unter developer@advocado.de."
+  utter_ask_start:
+  - text: Bitte beantworten Sie ein paar einfache Fragen.    Wollen wir starten?
+    buttons:
+    - title: ✅ Ja
+      payload: /get_started
+    - title: ❌ Nein
+      payload: /deny
+  utter_terms_of_service:
+  - text: Mit der weiteren Nutzung akzeptieren Sie die [AGB](https://www.advocado.de/agb-fuer-nutzer.html?utm_source=advobot)
+      und [Datenschutzbestimmungen](https://www.advocado.de/datenschutzhinweise.html?utm_source=advobot)
+      von advocado.
 actions:
 - utter_greet
 - utter_start
@@ -140,7 +145,7 @@ actions:
 - utter_result_gotolegalcase_process
 - utter_result_success
 - utter_result_impossible
-- utter_resiult_indifferent
+- utter_result_indifferent
 - utter_ask_restart
 - utter_thankyou
 - utter_welcome
@@ -148,6 +153,7 @@ actions:
 - utter_chitchat
 - utter_ask_continue
 - utter_iamabot
-- utter_result_indifferent
+- utter_ask_start
+- utter_terms_of_service
 forms:
 - rating_form
