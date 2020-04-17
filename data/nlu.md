@@ -8,12 +8,16 @@
 - servus
 - moin
 - Hi
+- Moin
+- Hey
+- Guten Tag
 
 ## intent:get_started
 - lass uns starten
 - los geht's
 - los geht es
 - starte
+- los gehts
 
 ## intent:goodbye
 - hau rein
@@ -22,6 +26,8 @@
 - tschö
 - mach's gut
 - bis später
+- ciao
+- tschüss
 
 ## intent:result
 - zeig mir das Ergebnis
@@ -41,6 +47,7 @@
 - gerne
 - gern
 - jo
+- jupp
 
 ## intent:deny
 - nein
@@ -54,6 +61,7 @@
 - nee
 - nope
 - kein
+- nö
 
 ## intent:unclear
 - unklar
@@ -99,6 +107,8 @@
 - wie ist das Wetter bei dir
 - regnet es gerade
 - schöner Tag oder
+- Wie geht es dir?
+- wie ist das Wetter bei dir?
 
 ## intent:thankyou
 - um danke hau rein
@@ -144,3 +154,5 @@
 - überspring das
 - überspringen
 - hab keine Lust mehr
+- ich hab keine lust mehr
+- ich habe keine Lust mehr
