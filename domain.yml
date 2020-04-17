@@ -90,11 +90,15 @@ responses:
       einfaches Formular: [hier klicken](https://www.advocado.de/rechtsfrage-stellen.html?utm_source=advobot)'
   utter_result_success:
   - text: 🎉 **Super! Die Bewertung kann wahrscheinlich gelöscht werden.**
+    image: https://media.giphy.com/media/xUNd9RiuOySv3HBYOc/giphy.gif
   - text: 🎉 **Glückwunsch! Die Bewertung kann wahrscheinlich gelöscht werden.**
+    image: https://media.giphy.com/media/xUNd9RiuOySv3HBYOc/giphy.gif
   utter_result_impossible:
   - text: 😞 ** Es tut uns leid. Die Bewertung kann wahrscheinlich nicht gelöscht werden.**
+    image: https://media.giphy.com/media/9Y5BbDSkSTiY8/source.gif
   utter_result_indifferent:
   - text: '**Die Bewertung kann eventuell gelöscht werden.**'
+    image: https://media.giphy.com/media/pPt76XeixegyA/source.gif
   utter_ask_restart:
   - text: Wollen Sie eine weitere Bewertung prüfen?
     buttons:
@@ -121,7 +125,8 @@ responses:
   utter_iamabot:
   - text: "Ich bin ein Bot. Ich wurde von advocado entwickelt und befinde mich in\
       \ einem frühen Entwicklungsstadium.\n\n Für Fragen und Anregungen wenden Sie\
-      \ sich bitte an meine Eltern unter developer@advocado.de."
+      \ sich bitte an meine Eltern unter <developer@advocado.de>."
+    image: https://media.giphy.com/media/xThuWjDKlFhOVEyQN2/giphy.gif
   utter_ask_start:
   - text: Bitte beantworten Sie ein paar einfache Fragen.    Wollen wir starten?
     buttons:
