@@ -1,6 +1,8 @@
 ## happy path
 * greet
     - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
 * get_started OR affirm
     - utter_start
     - rating_form
@@ -13,12 +15,16 @@
 ## start denied
 * greet
     - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
 * deny
     - utter_goodbye
 
 ## unhappy path
 * greet
     - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
 * get_started OR affirm
     - utter_start
     - rating_form
@@ -34,6 +40,8 @@
 ## very unhappy path
 * greet
     - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
 * get_started OR affirm
     - utter_start
     - rating_form
@@ -55,6 +63,8 @@
 ## stop but continue path
 * greet
     - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
 * get_started OR affirm
     - utter_start
     - rating_form
@@ -71,6 +81,8 @@
 ## stop and really stop path
 * greet
     - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
 * get_started OR affirm
     - utter_start
     - rating_form
@@ -95,6 +107,8 @@
 
 * greet
     - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
 * get_started OR affirm
     - utter_start
     - rating_form
@@ -123,6 +137,8 @@
 
 * greet
     - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
 * get_started OR affirm
     - utter_start
     - rating_form
@@ -151,6 +167,8 @@
 
 * greet
     - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
 * get_started OR affirm
     - utter_start
     - rating_form
@@ -179,6 +197,8 @@
 
 * greet
     - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
 * get_started OR affirm
     - utter_start
     - rating_form
@@ -207,6 +227,8 @@
 
 * greet
     - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
 * get_started OR affirm
     - utter_start
     - rating_form
@@ -235,6 +257,8 @@
 
 * greet
     - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
 * get_started OR affirm
     - utter_start
     - rating_form
@@ -263,6 +287,8 @@
 
 * greet
     - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
 * get_started OR affirm
     - utter_start
     - rating_form
@@ -291,6 +317,8 @@
 
 * greet
     - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
 * stop
     - utter_ask_continue
 * get_started OR affirm
@@ -311,6 +339,8 @@
 
 * greet
     - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
 * get_started OR affirm
     - utter_start
     - rating_form
