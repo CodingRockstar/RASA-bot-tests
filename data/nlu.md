@@ -8,12 +8,19 @@
 - servus
 - moin
 - Hi
+- Moin
+- Hey
+- Guten Tag
+- Hallo
+- Guten Morgen
+- moinsen
 
 ## intent:get_started
 - lass uns starten
 - los geht's
 - los geht es
 - starte
+- los gehts
 
 ## intent:goodbye
 - hau rein
@@ -22,6 +29,8 @@
 - tschö
 - mach's gut
 - bis später
+- ciao
+- tschüss
 
 ## intent:result
 - zeig mir das Ergebnis
@@ -41,6 +50,12 @@
 - gerne
 - gern
 - jo
+- jupp
+- Klar
+- Natürlich
+- Jop
+- Jo
+- jepp
 
 ## intent:deny
 - nein
@@ -54,17 +69,24 @@
 - nee
 - nope
 - kein
+- nö
+- Nein
 
 ## intent:unclear
 - unklar
 - ich weiß nicht
 - mir egal
+- Weis nicht
+- Unklar
+- weiß ich nicht
+- Vielleicht
 
 ## intent:indifferent
 - teilweise
 - teils teils
 - 50 50
 - 50/50
+- Teilweise
 
 ## intent:bot_challenge
 - bist du ein bot?
@@ -72,6 +94,15 @@
 - spreche ich mit einem bot?
 - spreche ich mit einem mensch?
 - wer bist du?
+- Was kannst du?
+- Wer bist du?
+- Wie ist dein name?
+- bist du ein Bot?
+
+## intent:developedby
+- wer ist dein Erfinder?
+- wer hat dich gebaut?
+- wer hat dich erfunden?
 
 ## intent:chitchat
 - ich will mit deinem Boss sprechen
@@ -99,6 +130,10 @@
 - wie ist das Wetter bei dir
 - regnet es gerade
 - schöner Tag oder
+- Wie geht es dir?
+- wie ist das Wetter bei dir?
+- wie geht es dir?
+- Wie ist das wetter
 
 ## intent:thankyou
 - um danke hau rein
@@ -144,3 +179,21 @@
 - überspring das
 - überspringen
 - hab keine Lust mehr
+- ich hab keine lust mehr
+- ich habe keine Lust mehr
+- keine lust mehr
+
+## intent:hastext_affirm
+- Text
+- die bewertung enthält text
+- die bewertung hat text
+- da steht text drin
+- mit text
+
+## intent:hastext_deny
+- Ohne Text
+- kein Text
+- die bewertung hat keinen Text
+- nein kein text
+- es wurde nichts geschrieben
+- kein text

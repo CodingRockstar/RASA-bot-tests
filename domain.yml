@@ -1,6 +1,6 @@
 session_config:
   session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  carry_over_slots_to_new_session: false
 intents:
 - greet
 - get_started
@@ -14,6 +14,9 @@ intents:
 - thankyou
 - stop
 - chitchat
+- hastext_affirm
+- hastext_deny
+- developedby
 slots:
   hastext:
     type: unfeaturized
@@ -31,14 +34,8 @@ slots:
     auto_fill: false
 responses:
   utter_greet:
-  - text: "Herzlich Willkommen.\nMein Name ist advo-Bot.\n\nIch schätze ein, ob Sie\
-      \ eine negative Google-Bewertung löschen lassen können.\n\n Bitte beantworten\
-      \ Sie ein paar einfache Fragen.\n  Wollen wir starten?"
-    buttons:
-    - title: ✅ Ja
-      payload: /get_started
-    - title: ❌ Nein
-      payload: /deny
+  - text: "Herzlich Willkommen. Mein Name ist advo-Bot. \n\nIch schätze ein, ob Sie\
+      \ eine negative Google-Bewertung löschen lassen können."
   utter_start:
   - text: Alles klar.
   - text: ''
@@ -96,11 +93,15 @@ responses:
       einfaches Formular: [hier klicken](https://www.advocado.de/rechtsfrage-stellen.html?utm_source=advobot)'
   utter_result_success:
   - text: 🎉 **Super! Die Bewertung kann wahrscheinlich gelöscht werden.**
+    image: https://media.giphy.com/media/xUNd9RiuOySv3HBYOc/giphy.gif
   - text: 🎉 **Glückwunsch! Die Bewertung kann wahrscheinlich gelöscht werden.**
+    image: https://media.giphy.com/media/xUNd9RiuOySv3HBYOc/giphy.gif
   utter_result_impossible:
   - text: 😞 ** Es tut uns leid. Die Bewertung kann wahrscheinlich nicht gelöscht werden.**
+    image: https://media.giphy.com/media/9Y5BbDSkSTiY8/source.gif
   utter_result_indifferent:
   - text: '**Die Bewertung kann eventuell gelöscht werden.**'
+    image: https://media.giphy.com/media/pPt76XeixegyA/source.gif
   utter_ask_restart:
   - text: Wollen Sie eine weitere Bewertung prüfen?
     buttons:
@@ -127,7 +128,22 @@ responses:
   utter_iamabot:
   - text: "Ich bin ein Bot. Ich wurde von advocado entwickelt und befinde mich in\
       \ einem frühen Entwicklungsstadium.\n\n Für Fragen und Anregungen wenden Sie\
-      \ sich bitte an meine Eltern unter developer@advocado.de."
+      \ sich bitte an meine Eltern unter <developer@advocado.de>."
+    image: https://media.giphy.com/media/xThuWjDKlFhOVEyQN2/giphy.gif
+  utter_ask_start:
+  - text: Bitte beantworten Sie ein paar einfache Fragen.    Wollen wir starten?
+    buttons:
+    - title: ✅ Ja
+      payload: /get_started
+    - title: ❌ Nein
+      payload: /deny
+  utter_terms_of_service:
+  - text: Mit der weiteren Nutzung akzeptieren Sie die [AGB](https://www.advocado.de/agb-fuer-nutzer.html?utm_source=advobot)
+      und [Datenschutzbestimmungen](https://www.advocado.de/datenschutzhinweise.html?utm_source=advobot)
+      von advocado.
+  utter_developedby:
+  - text: ❤️
+    image: https://www.coding-rockstar.de/advochatbot/stephan-hearts.gif
 actions:
 - utter_greet
 - utter_start
@@ -140,7 +156,7 @@ actions:
 - utter_result_gotolegalcase_process
 - utter_result_success
 - utter_result_impossible
-- utter_resiult_indifferent
+- utter_result_indifferent
 - utter_ask_restart
 - utter_thankyou
 - utter_welcome
@@ -148,6 +164,8 @@ actions:
 - utter_chitchat
 - utter_ask_continue
 - utter_iamabot
-- utter_result_indifferent
+- utter_ask_start
+- utter_terms_of_service
+- utter_developedby
 forms:
 - rating_form
