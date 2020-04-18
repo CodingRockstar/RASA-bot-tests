@@ -53,7 +53,9 @@ class RatingForm(FormAction):
             "hastext": [
                 self.from_entity(entity="hastext"),
                 self.from_intent(intent="affirm", value="ja"),
-                self.from_intent(intent="deny", value="nein")
+                self.from_intent(intent="deny", value="nein"),
+                self.from_intent(intent="hastext_affirm", value="ja"),
+                self.from_intent(intent="hastext_deny", value="nein")
             ],
             "truestatements": [
                 self.from_entity(entity="truestatemens"),
@@ -99,4 +101,4 @@ class RatingForm(FormAction):
             dispatcher.utter_message(template="utter_result_success")
             dispatcher.utter_message(template="utter_result_gotolegalcase_process")
 
-        return []
+        return [AllSlotsReset()]
