@@ -14,6 +14,9 @@ intents:
 - thankyou
 - stop
 - chitchat
+- hastext_affirm
+- hastext_deny
+- developedby
 slots:
   hastext:
     type: unfeaturized
@@ -138,6 +141,9 @@ responses:
   - text: Mit der weiteren Nutzung akzeptieren Sie die [AGB](https://www.advocado.de/agb-fuer-nutzer.html?utm_source=advobot)
       und [Datenschutzbestimmungen](https://www.advocado.de/datenschutzhinweise.html?utm_source=advobot)
       von advocado.
+  utter_developedby:
+  - text: ❤️
+    image: https://www.coding-rockstar.de/advochatbot/stephan-hearts.gif
 actions:
 - utter_greet
 - utter_start
@@ -160,5 +166,6 @@ actions:
 - utter_iamabot
 - utter_ask_start
 - utter_terms_of_service
+- utter_developedby
 forms:
 - rating_form

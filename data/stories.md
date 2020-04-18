@@ -1,17 +1,3 @@
-## happy path
-* greet
-    - utter_greet
-    - utter_terms_of_service
-    - utter_ask_start
-* get_started OR affirm
-    - utter_start
-    - rating_form
-    - form{"name": "rating_form"}
-    - form{"name": null}
-    - utter_goodbye
-* thankyou
-    - utter_welcome
-
 ## start denied
 * greet
     - utter_greet
@@ -118,7 +104,7 @@
     - rating_form
     - slot{"iscustomer":"ja"}
     - slot{"requested_slot":"hastext"}
-* deny
+* deny OR hastext_deny
     - rating_form
     - slot{"hastext":"nein"}
     - slot{"requested_slot":"truestatements"}
@@ -148,7 +134,7 @@
     - rating_form
     - slot{"iscustomer":"ja"}
     - slot{"requested_slot":"hastext"}
-* affirm
+* affirm OR hastext_affirm
     - rating_form
     - slot{"hastext":"ja"}
     - slot{"requested_slot":"truestatements"}
@@ -178,7 +164,7 @@
     - rating_form
     - slot{"iscustomer":"ja"}
     - slot{"requested_slot":"hastext"}
-* deny
+* deny OR hastext_deny
     - rating_form
     - slot{"hastext":"nein"}
     - slot{"requested_slot":"truestatements"}
@@ -208,7 +194,7 @@
     - rating_form
     - slot{"iscustomer":"ja"}
     - slot{"requested_slot":"hastext"}
-* deny
+* deny OR hastext_deny
     - rating_form
     - slot{"hastext":"nein"}
     - slot{"requested_slot":"truestatements"}
@@ -238,7 +224,7 @@
     - rating_form
     - slot{"iscustomer":"ja"}
     - slot{"requested_slot":"hastext"}
-* deny
+* deny OR hastext_deny
     - rating_form
     - slot{"hastext":"nein"}
     - slot{"requested_slot":"truestatements"}
@@ -268,7 +254,7 @@
     - rating_form
     - slot{"iscustomer":"ja"}
     - slot{"requested_slot":"hastext"}
-* affirm
+* affirm OR hastext_affirm
     - rating_form
     - slot{"hastext":"ja"}
     - slot{"requested_slot":"truestatements"}
@@ -298,7 +284,7 @@
     - rating_form
     - slot{"iscustomer":"ja"}
     - slot{"requested_slot":"hastext"}
-* affirm
+* affirm OR hastext_affirm
     - rating_form
     - slot{"hastext":"ja"}
     - slot{"requested_slot":"truestatements"}
@@ -354,7 +340,7 @@
     - utter_chitchat
     - rating_form
     - slot{"requested_slot":"hastext"}
-* affirm
+* affirm OR hastext_affirm
     - rating_form
     - slot{"hastext":"ja"}
     - slot{"requested_slot":"truestatements"}
@@ -367,4 +353,24 @@
     - slot{"offences":"ja"}
     - form{"name":null}
     - slot{"requested_slot":null}
+    - utter_goodbye
+
+## developed by
+* developedby
+  - utter_developedby
+
+## greet /w developed by & stop
+
+* greet
+    - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
+* developedby
+    - utter_developedby
+    - utter_ask_continue
+* deny
+    - action_deactivate_form
+    - form{"name":null}
+    - slot{"requested_slot":null}
+    - utter_thankyou
     - utter_goodbye
