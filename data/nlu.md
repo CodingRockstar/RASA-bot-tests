@@ -79,13 +79,13 @@
 - Weis nicht
 - Unklar
 - weiß ich nicht
+- Vielleicht
 
 ## intent:indifferent
 - teilweise
 - teils teils
 - 50 50
 - 50/50
-- Vielleicht
 - Teilweise
 
 ## intent:bot_challenge
@@ -97,8 +97,12 @@
 - Was kannst du?
 - Wer bist du?
 - Wie ist dein name?
-- wer ist dein Erfinder?
 - bist du ein Bot?
+
+## intent:developedby
+- wer ist dein Erfinder?
+- wer hat dich gebaut?
+- wer hat dich erfunden?
 
 ## intent:chitchat
 - ich will mit deinem Boss sprechen
@@ -193,7 +197,3 @@
 - nein kein text
 - es wurde nichts geschrieben
 - kein text
-
-## intent:developedby
-- wer hat dich gebaut?
-- wer hat dich erfunden?
