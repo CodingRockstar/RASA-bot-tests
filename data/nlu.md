@@ -11,6 +11,9 @@
 - Moin
 - Hey
 - Guten Tag
+- Hallo
+- Guten Morgen
+- moinsen
 
 ## intent:get_started
 - lass uns starten
@@ -48,6 +51,11 @@
 - gern
 - jo
 - jupp
+- Klar
+- Natürlich
+- Jop
+- Jo
+- jepp
 
 ## intent:deny
 - nein
@@ -62,17 +70,23 @@
 - nope
 - kein
 - nö
+- Nein
 
 ## intent:unclear
 - unklar
 - ich weiß nicht
 - mir egal
+- Weis nicht
+- Unklar
+- weiß ich nicht
 
 ## intent:indifferent
 - teilweise
 - teils teils
 - 50 50
 - 50/50
+- Vielleicht
+- Teilweise
 
 ## intent:bot_challenge
 - bist du ein bot?
@@ -80,6 +94,11 @@
 - spreche ich mit einem bot?
 - spreche ich mit einem mensch?
 - wer bist du?
+- Was kannst du?
+- Wer bist du?
+- Wie ist dein name?
+- wer ist dein Erfinder?
+- bist du ein Bot?
 
 ## intent:chitchat
 - ich will mit deinem Boss sprechen
@@ -109,6 +128,8 @@
 - schöner Tag oder
 - Wie geht es dir?
 - wie ist das Wetter bei dir?
+- wie geht es dir?
+- Wie ist das wetter
 
 ## intent:thankyou
 - um danke hau rein
@@ -156,3 +177,23 @@
 - hab keine Lust mehr
 - ich hab keine lust mehr
 - ich habe keine Lust mehr
+- keine lust mehr
+
+## intent:hastext_affirm
+- Text
+- die bewertung enthält text
+- die bewertung hat text
+- da steht text drin
+- mit text
+
+## intent:hastext_deny
+- Ohne Text
+- kein Text
+- die bewertung hat keinen Text
+- nein kein text
+- es wurde nichts geschrieben
+- kein text
+
+## intent:developedby
+- wer hat dich gebaut?
+- wer hat dich erfunden?
