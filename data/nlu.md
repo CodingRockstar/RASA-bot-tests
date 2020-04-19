@@ -14,6 +14,7 @@
 - Hallo
 - Guten Morgen
 - moinsen
+- Mojn
 
 ## intent:get_started
 - lass uns starten
@@ -21,6 +22,8 @@
 - los geht es
 - starte
 - los gehts
+- Start
+- Neustart
 
 ## intent:goodbye
 - hau rein
@@ -31,6 +34,7 @@
 - bis später
 - ciao
 - tschüss
+- Bis später
 
 ## intent:result
 - zeig mir das Ergebnis
@@ -80,6 +84,7 @@
 - Unklar
 - weiß ich nicht
 - Vielleicht
+- Unsicher
 
 ## intent:indifferent
 - teilweise
@@ -98,6 +103,7 @@
 - Wer bist du?
 - Wie ist dein name?
 - bist du ein Bot?
+- Wer bist du
 
 ## intent:developedby
 - wer ist dein Erfinder?
@@ -134,6 +140,7 @@
 - wie ist das Wetter bei dir?
 - wie geht es dir?
 - Wie ist das wetter
+- Wie geht es dir
 
 ## intent:thankyou
 - um danke hau rein
@@ -189,6 +196,7 @@
 - die bewertung hat text
 - da steht text drin
 - mit text
+- Mit Text
 
 ## intent:hastext_deny
 - Ohne Text
@@ -197,3 +205,4 @@
 - nein kein text
 - es wurde nichts geschrieben
 - kein text
+- Kein Text
