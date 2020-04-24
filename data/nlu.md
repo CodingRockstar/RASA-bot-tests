@@ -15,6 +15,10 @@
 - Guten Morgen
 - moinsen
 - Mojn
+- Moin Moin :)
+- Sehr geehrtes advocado Team, ich habe eine Frage
+- hello
+- Servus
 
 ## intent:get_started
 - lass uns starten
@@ -24,6 +28,7 @@
 - los gehts
 - Start
 - Neustart
+- Bitte starte von vorne
 
 ## intent:goodbye
 - hau rein
@@ -35,6 +40,11 @@
 - ciao
 - tschüss
 - Bis später
+- Bya
+- Bye
+- Bis später!
+- Tschüss
+- :winken:
 
 ## intent:result
 - zeig mir das Ergebnis
@@ -60,6 +70,8 @@
 - Jop
 - Jo
 - jepp
+- Definitiv
+- Na klar
 
 ## intent:deny
 - nein
@@ -75,6 +87,7 @@
 - kein
 - nö
 - Nein
+- Ganz und gar nicht
 
 ## intent:unclear
 - unklar
@@ -85,6 +98,11 @@
 - weiß ich nicht
 - Vielleicht
 - Unsicher
+- Ich glaube schon
+- ich bin mir nicht sicher
+- ich bin mir unsicher
+- Ich bin mir nicht sicher
+- vielleicht
 
 ## intent:indifferent
 - teilweise
@@ -92,6 +110,8 @@
 - 50 50
 - 50/50
 - Teilweise
+- Ich glaube nicht aber die Bewertung ist sehr lang und manches klingt wirklich sehr beleidigend aber anderes wiederum auch sehr freundlich
+- Nur teilweise
 
 ## intent:bot_challenge
 - bist du ein bot?
@@ -109,6 +129,7 @@
 - wer ist dein Erfinder?
 - wer hat dich gebaut?
 - wer hat dich erfunden?
+- Wer hat dich erfunden
 
 ## intent:chitchat
 - ich will mit deinem Boss sprechen
@@ -141,6 +162,7 @@
 - wie geht es dir?
 - Wie ist das wetter
 - Wie geht es dir
+- Wie ist das Wetter heute?
 
 ## intent:thankyou
 - um danke hau rein
@@ -163,6 +185,9 @@
 - geile scheisse
 - geiler shit
 - geil alter
+- cool, ich danke dir
+- Oh super, danke
+- Danke
 
 ## intent:stop
 - ok wenn du nicht helfen kannst
