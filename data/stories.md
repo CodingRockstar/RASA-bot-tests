@@ -21,7 +21,6 @@
     - form{"name": null}
 * thankyou
     - utter_welcome
-    - utter_goodbye
 
 ## very unhappy path
 * greet
@@ -44,7 +43,6 @@
     - form{"name": null}
 * thankyou
     - utter_welcome
-    - utter_goodbye
 
 ## stop but continue path
 * greet
@@ -59,10 +57,9 @@
     - utter_ask_continue
 * affirm
     - rating_form
-    - form{"name": null}
+    - form{"name": "rating_form"}
 * thankyou
     - utter_thankyou
-    - utter_goodbye
 
 ## stop and really stop path
 * greet
@@ -79,7 +76,6 @@
     - action_deactivate_form
     - form{"name": null}
     - utter_thankyou
-    - utter_goodbye
 
 ## say goodbye
 * goodbye
@@ -117,7 +113,6 @@
     - slot{"offences":"ja"}
     - form{"name":null}
     - slot{"requested_slot":null}
-    - utter_goodbye
 
 ## 1-1-1-0
 
@@ -147,7 +142,6 @@
     - slot{"offences":"nein"}
     - form{"name":null}
     - slot{"requested_slot":null}
-    - utter_goodbye
 
 ## 1-0-1-1
 
@@ -177,7 +171,6 @@
     - slot{"offences":"ja"}
     - form{"name":null}
     - slot{"requested_slot":null}
-    - utter_goodbye
 
 ## 1-0-1-0
 
@@ -207,7 +200,6 @@
     - slot{"offences":"nein"}
     - form{"name":null}
     - slot{"requested_slot":null}
-    - utter_goodbye
 
 ## 1-0-1-2
 
@@ -237,7 +229,6 @@
     - slot{"offences":"unklar"}
     - form{"name":null}
     - slot{"requested_slot":null}
-    - utter_goodbye
 
 ## 1-1-1-1
 
@@ -267,7 +258,6 @@
     - slot{"offences":"ja"}
     - form{"name":null}
     - slot{"requested_slot":null}
-    - utter_goodbye
 
 ## 1-1-1-2
 
@@ -297,7 +287,6 @@
     - slot{"offences":"unklar"}
     - form{"name":null}
     - slot{"requested_slot":null}
-    - utter_goodbye
 
 ## stop - continue - stop - really stop
 
@@ -319,7 +308,6 @@
     - form{"name":null}
     - slot{"requested_slot":null}
     - utter_thankyou
-    - utter_goodbye
 
 ## 1-1-1-1 w/ chitchat
 
@@ -353,7 +341,6 @@
     - slot{"offences":"ja"}
     - form{"name":null}
     - slot{"requested_slot":null}
-    - utter_goodbye
 
 ## developed by
 * developedby
@@ -373,7 +360,6 @@
     - form{"name":null}
     - slot{"requested_slot":null}
     - utter_thankyou
-    - utter_goodbye
 
 ## need help
 
