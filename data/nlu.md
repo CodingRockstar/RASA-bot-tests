@@ -231,3 +231,9 @@
 - es wurde nichts geschrieben
 - kein text
 - Kein Text
+
+## intent:needhelp
+- hilfe
+- Wobei kannst du mir helfen?
+- Hilfe
+- Was passiert jetzt?
