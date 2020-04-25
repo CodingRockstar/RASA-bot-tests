@@ -17,6 +17,7 @@ intents:
 - hastext_affirm
 - hastext_deny
 - developedby
+- needhelp
 slots:
   hastext:
     type: unfeaturized
@@ -144,6 +145,11 @@ responses:
   utter_developedby:
   - text: ❤️
     image: https://www.coding-rockstar.de/advochatbot/stephan-hearts.gif
+  utter_help:
+  - text: Indem Sie einige Fragen beantworten, kann ich beurteilen ob Sie eine negative
+      Bewertung löschen lassen können. Sollte dies der Fall sein, können Sie direkt
+      eine Löschanfrage über advocado einreichen. Ein spezialisierter Anwalt aus unserem
+      Partnernetzwerk wird die Löschung dann in Ihrem Namen durchsetzen.
 actions:
 - utter_greet
 - utter_start
@@ -167,5 +173,6 @@ actions:
 - utter_ask_start
 - utter_terms_of_service
 - utter_developedby
+- utter_help
 forms:
 - rating_form

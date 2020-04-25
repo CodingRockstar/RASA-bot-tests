@@ -374,3 +374,8 @@
     - slot{"requested_slot":null}
     - utter_thankyou
     - utter_goodbye
+
+## need help
+
+* needhelp
+    - utter_help
