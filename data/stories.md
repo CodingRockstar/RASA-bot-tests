@@ -365,3 +365,41 @@
 
 * needhelp
     - utter_help
+
+## 1-0-0-1 /w help
+
+* greet
+    - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
+* affirm
+    - utter_start
+    - rating_form
+    - form{"name":"rating_form"}
+    - slot{"requested_slot":"iscustomer"}
+* needhelp
+    - utter_help
+    - utter_ask_continue
+* affirm
+    - rating_form
+    - slot{"requested_slot":"iscustomer"}
+* affirm
+    - rating_form
+    - slot{"iscustomer":"ja"}
+    - slot{"requested_slot":"hastext"}
+* hastext_deny
+    - rating_form
+    - slot{"hastext":"nein"}
+    - slot{"requested_slot":"truestatements"}
+* deny
+    - rating_form
+    - slot{"truestatements":"nein"}
+    - slot{"requested_slot":"offences"}
+* affirm
+    - rating_form
+    - slot{"offences":"ja"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+* thankyou
+    - utter_thankyou
+    - utter_goodbye
