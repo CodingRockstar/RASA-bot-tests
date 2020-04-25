@@ -29,6 +29,7 @@
 - Start
 - Neustart
 - Bitte starte von vorne
+- ich habe eine neue Bewertung bekommen
 
 ## intent:goodbye
 - hau rein
@@ -45,6 +46,7 @@
 - Bis später!
 - Tschüss
 - :winken:
+- c ya
 
 ## intent:result
 - zeig mir das Ergebnis
@@ -72,6 +74,7 @@
 - jepp
 - Definitiv
 - Na klar
+- si
 
 ## intent:deny
 - nein
@@ -88,6 +91,7 @@
 - nö
 - Nein
 - Ganz und gar nicht
+- auf keinen fall
 
 ## intent:unclear
 - unklar
@@ -103,6 +107,7 @@
 - ich bin mir unsicher
 - Ich bin mir nicht sicher
 - vielleicht
+- bin mir unsicher
 
 ## intent:indifferent
 - teilweise
@@ -188,6 +193,8 @@
 - cool, ich danke dir
 - Oh super, danke
 - Danke
+- super danke
+- das mache ich auf jeden Fall
 
 ## intent:stop
 - ok wenn du nicht helfen kannst
@@ -237,3 +244,4 @@
 - Wobei kannst du mir helfen?
 - Hilfe
 - Was passiert jetzt?
+- ahhh hilfe
