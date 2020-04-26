@@ -174,5 +174,6 @@ actions:
 - utter_terms_of_service
 - utter_developedby
 - utter_help
+- action_clear_slots
 forms:
 - rating_form

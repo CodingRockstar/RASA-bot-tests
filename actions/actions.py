@@ -102,3 +102,15 @@ class RatingForm(FormAction):
             dispatcher.utter_message(template="utter_result_gotolegalcase_process")
 
         return [AllSlotsReset()]
+
+
+"""
+Class ActionClearSlots
+set Slots to None and restart
+"""
+class ActionClearSlots(Action):
+    def name(self):
+        return "action_clear_slots"
+
+    def run(self, dispatcher, tracker, domain):
+        return [AllSlotsReset()]
