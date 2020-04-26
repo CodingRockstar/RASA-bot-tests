@@ -13,6 +13,7 @@
     - utter_ask_start
 * get_started OR affirm
     - utter_start
+    - action_clear_slots
     - rating_form
     - form{"name": "rating_form"}
 * chitchat
@@ -29,6 +30,7 @@
     - utter_ask_start
 * get_started OR affirm
     - utter_start
+    - action_clear_slots
     - rating_form
     - form{"name": "rating_form"}
 * chitchat
@@ -51,6 +53,7 @@
     - utter_ask_start
 * get_started OR affirm
     - utter_start
+    - action_clear_slots
     - rating_form
     - form{"name": "rating_form"}
 * stop
@@ -68,6 +71,7 @@
     - utter_ask_start
 * get_started OR affirm
     - utter_start
+    - action_clear_slots
     - rating_form
     - form{"name": "rating_form"}
 * stop
@@ -80,6 +84,7 @@
 ## say goodbye
 * goodbye
   - utter_goodbye
+  - action_clear_slots
 
 ## bot challenge
 * bot_challenge
@@ -93,6 +98,7 @@
     - utter_ask_start
 * get_started OR affirm
     - utter_start
+    - action_clear_slots
     - rating_form
     - form{"name":"rating_form"}
     - slot{"requested_slot":"iscustomer"}
@@ -122,6 +128,7 @@
     - utter_ask_start
 * get_started OR affirm
     - utter_start
+    - action_clear_slots
     - rating_form
     - form{"name":"rating_form"}
     - slot{"requested_slot":"iscustomer"}
@@ -151,6 +158,7 @@
     - utter_ask_start
 * get_started OR affirm
     - utter_start
+    - action_clear_slots
     - rating_form
     - form{"name":"rating_form"}
     - slot{"requested_slot":"iscustomer"}
@@ -180,6 +188,7 @@
     - utter_ask_start
 * get_started OR affirm
     - utter_start
+    - action_clear_slots
     - rating_form
     - form{"name":"rating_form"}
     - slot{"requested_slot":"iscustomer"}
@@ -209,6 +218,7 @@
     - utter_ask_start
 * get_started OR affirm
     - utter_start
+    - action_clear_slots
     - rating_form
     - form{"name":"rating_form"}
     - slot{"requested_slot":"iscustomer"}
@@ -238,6 +248,7 @@
     - utter_ask_start
 * get_started OR affirm
     - utter_start
+    - action_clear_slots
     - rating_form
     - form{"name":"rating_form"}
     - slot{"requested_slot":"iscustomer"}
@@ -267,6 +278,7 @@
     - utter_ask_start
 * get_started OR affirm
     - utter_start
+    - action_clear_slots
     - rating_form
     - form{"name":"rating_form"}
     - slot{"requested_slot":"iscustomer"}
@@ -298,6 +310,7 @@
     - utter_ask_continue
 * get_started OR affirm
     - utter_start
+    - action_clear_slots
     - rating_form
     - form{"name":"rating_form"}
     - slot{"requested_slot":"iscustomer"}
@@ -317,6 +330,7 @@
     - utter_ask_start
 * get_started OR affirm
     - utter_start
+    - action_clear_slots
     - rating_form
     - form{"name":"rating_form"}
     - slot{"requested_slot":"iscustomer"}
@@ -374,6 +388,7 @@
     - utter_ask_start
 * affirm
     - utter_start
+    - action_clear_slots
     - rating_form
     - form{"name":"rating_form"}
     - slot{"requested_slot":"iscustomer"}
