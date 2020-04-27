@@ -252,6 +252,7 @@
 - Hilfe
 - Was passiert jetzt?
 - ahhh hilfe
+- ich habe eine schlechte Bewertung erhalten und möchte die nun gerne löschen lassen. Können sie mir dabei helfen?
 
 ## intent:insult
 - Idiot

@@ -154,6 +154,9 @@ responses:
   utter_insult:
   - text: Diese Aussage empfinde ich als beleidigend. Ich wünsche Ihnen einen schönen
       Tag!
+  utter_default:
+  - text: Es tut mir leid. Das habe ich leider nicht verstanden.  Können Sie das bitte
+      anders formulieren?
 actions:
 - utter_greet
 - utter_start
@@ -180,5 +183,6 @@ actions:
 - utter_help
 - action_clear_slots
 - utter_insult
+- utter_default
 forms:
 - rating_form
