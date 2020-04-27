@@ -418,3 +418,40 @@
 * thankyou
     - utter_thankyou
     - utter_goodbye
+
+## insult at start
+
+* insult
+    - utter_insult
+    - utter_goodbye
+    - action_clear_slots
+    - action_deactivate_form
+    - form{"name":null}
+    - slot{"requested_slot":null}
+
+## insult during process
+* greet
+    - utter_greet
+    - utter_terms_of_service
+    - utter_ask_start
+* affirm
+    - utter_start
+    - action_clear_slots
+    - rating_form
+    - form{"name":"rating_form"}
+    - slot{"requested_slot":"iscustomer"}
+* affirm
+    - rating_form
+    - slot{"iscustomer":"ja"}
+    - slot{"requested_slot":"hastext"}
+* deny
+    - rating_form
+    - slot{"hastext":"nein"}
+    - slot{"requested_slot":"truestatements"}
+* insult
+    - utter_insult
+    - utter_goodbye
+    - action_clear_slots
+    - action_deactivate_form
+    - form{"name":null}
+    - slot{"requested_slot":null}

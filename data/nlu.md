@@ -30,6 +30,9 @@
 - Neustart
 - Bitte starte von vorne
 - ich habe eine neue Bewertung bekommen
+- mist. vertippt. neustart
+- nochmal von vorne
+- neustart
 
 ## intent:goodbye
 - hau rein
@@ -47,6 +50,7 @@
 - Tschüss
 - :winken:
 - c ya
+- bye
 
 ## intent:result
 - zeig mir das Ergebnis
@@ -168,6 +172,7 @@
 - Wie ist das wetter
 - Wie geht es dir
 - Wie ist das Wetter heute?
+- wie is das Wetter
 
 ## intent:thankyou
 - um danke hau rein
@@ -195,6 +200,8 @@
 - Danke
 - super danke
 - das mache ich auf jeden Fall
+- ok, danke
+- perfekt danke
 
 ## intent:stop
 - ok wenn du nicht helfen kannst
@@ -245,3 +252,19 @@
 - Hilfe
 - Was passiert jetzt?
 - ahhh hilfe
+
+## intent:insult
+- Idiot
+- Arsch
+- blöder Arsch
+- Vollidiot
+- Nichtskönner
+- Arschloch
+- Penner
+- Bratze
+- Pisser
+- Hurensohn
+- vollhonk
+- bist du dumm?
+- bist du dumm???
+- hey du idiot

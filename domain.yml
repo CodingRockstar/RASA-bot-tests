@@ -2,6 +2,7 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: false
 intents:
+- insult
 - greet
 - get_started
 - result
@@ -150,6 +151,9 @@ responses:
       Bewertung löschen lassen können. Sollte dies der Fall sein, können Sie direkt
       eine Löschanfrage über advocado einreichen. Ein spezialisierter Anwalt aus unserem
       Partnernetzwerk wird die Löschung dann in Ihrem Namen durchsetzen.
+  utter_insult:
+  - text: Diese Aussage empfinde ich als beleidigend. Ich wünsche Ihnen einen schönen
+      Tag!
 actions:
 - utter_greet
 - utter_start
@@ -175,5 +179,6 @@ actions:
 - utter_developedby
 - utter_help
 - action_clear_slots
+- utter_insult
 forms:
 - rating_form
